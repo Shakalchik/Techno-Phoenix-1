@@ -68,7 +68,7 @@
 
 /obj/item/weapon/brander/attack_self(mob/user)
 	..()
-	var/input = input(user,"Select Brand Type", "Brands") as null|anything in list("ÍÀÖÈÑÒ", "ÊÎÌÌÓÍÈÑÒ", "THIEF", "RAPIST", "CRIMINAL")
+	var/input = input(user,"Select Brand Type", "Brands") as null|anything in list("ÍÀÖÈÑÒ", "ÊÎÌÌÓÍÈÑÒ", "ÂÎĞ", "ÍÀÑÈËÜÍÈÊ", "ÏĞÅÑÒÓÏÍÈÊ")
 	if(input)
 		brand = input
 

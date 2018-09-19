@@ -64,17 +64,17 @@
 
 //Disgust
 /datum/happiness_event/disgust/gross
-	description = "<span class='warning'>That was gross.</span>\n"
+	description = "<span class='warning'>Ёто было ужасно.</span>\n"
 	happiness = -2
 	timeout = 1800
 
 /datum/happiness_event/disgust/verygross //Already in game.
-	description = "<span class='warning'>I think I'm going to puke...</span>\n"
+	description = "<span class='warning'>я думаю, мен&#255; вырвет...</span>\n"
 	happiness = -4
 	timeout = 1800
 
 /datum/happiness_event/disgust/disgusted //Already in game.
-	description = "<span class='danger'>Oh god that's disgusting...</span>\n"
+	description = "<span class='danger'>Ѕоже, это отвратительно...</span>\n"
 	happiness = -6
 	timeout = 1800
 
@@ -92,7 +92,7 @@
 	timeout = 1800
 
 /datum/happiness_event/handcuffed
-	description = "<span class='warning'>I guess my antics finally caught up with me..</span>\n"
+	description = "<span class='warning'>¬идимо,&#255; заслужил это..</span>\n"
 	happiness = -1
 
 /datum/happiness_event/booze //Already in game.

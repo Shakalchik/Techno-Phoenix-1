@@ -396,7 +396,7 @@
 	icon_state = "maint_library"
 
 /area/maintenance/locker
-	name = "\improper Locker Room Maintenance"
+	name = "\improper Gym Room Maintenance"
 	icon_state = "maint_locker"
 
 /area/maintenance/medbay
@@ -569,7 +569,7 @@
 	name = "Theatre - Backstage"
 
 /area/crew_quarters/locker
-	name = "\improper Locker Room"
+	name = "\improper Gym Room"
 	icon_state = "locker"
 
 /area/crew_quarters/toilet
@@ -592,7 +592,7 @@
 	sound_env = SMALL_SOFTFLOOR
 
 /area/crew_quarters/locker/locker_toilet
-	name = "\improper Locker Toilets"
+	name = "\improper Gym Toilets"
 	icon_state = "toilet"
 	sound_env = SMALL_ENCLOSED
 
