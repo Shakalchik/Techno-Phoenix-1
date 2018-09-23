@@ -11,7 +11,7 @@
 	num_alternate_languages = 2
 	secondary_langs = list(LANGUAGE_SOL_COMMON)
 	name_language = null // Use the first-name last-name generator rather than a language scrambler
-	min_age = 17
+	min_age = 14
 	max_age = 85
 	gluttonous = GLUT_TINY
 	teeth_type = /obj/item/stack/teeth/human //Teeth
@@ -23,7 +23,7 @@
 /datum/species/human/handle_post_spawn(var/mob/living/carbon/human/H)
 	if(prob(H.age))
 		H.virgin = FALSE
-	else 
+	else
 		H.virgin = TRUE
 
 /datum/species/human/get_bodytype(var/mob/living/carbon/human/H)
@@ -254,7 +254,7 @@
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right)
 		)
 
-/datum/species/diona
+/*/datum/species/diona
 	name = SPECIES_DIONA
 	name_plural = "Dionaea"
 	icobase = 'icons/mob/human_races/r_diona.dmi'
@@ -377,4 +377,4 @@
 		H.diona_split_nymph()
 
 /datum/species/diona/get_blood_name()
-	return "sap"
+	return "sap"*/

@@ -20,8 +20,9 @@
 	min_age = 1
 	max_age = 90
 
-	brute_mod = 1 // Because of the introduction of FBPs, IPCs are rebalanced back to 1.
-	burn_mod = 1  //
+	flash_mod = 1.2
+	brute_mod = 1.5 // Was too op (1), I've fix that
+	burn_mod = 1.3
 
 	warning_low_pressure = 50
 	hazard_low_pressure = -1
