@@ -48,13 +48,6 @@
 	id_type = /obj/item/weapon/card/id/engineering
 	pda_type = /obj/item/device/pda/engineering
 
-/decl/hierarchy/outfit/job/dreyfus/ouvrier
-	name = OUTFIT_JOB_NAME("Ouvrier")
-	uniform = /obj/item/clothing/under/overalls
-	id_type = /obj/item/weapon/card/id/dreyfus/cargo/ouvrier
-	pda_type = /obj/item/device/pda/cargo
-	l_ear = /obj/item/device/radio/headset/headset_cargo
-
 /decl/hierarchy/outfit/job/science/superviseur
 	name = OUTFIT_JOB_NAME("Superviseur")
 	l_ear = /obj/item/device/radio/headset/heads/rd
@@ -85,30 +78,6 @@
 	suit = /obj/item/clothing/suit/armor/kommandant//He doesn't have a locker anymore.
 	id_type = /obj/item/weapon/card/id/dreyfus/kommandant
 	pda_type = /obj/item/device/pda/heads/kommandant
-
-/decl/hierarchy/outfit/job/cargo_kid
-	name = OUTFIT_JOB_NAME("Cargo Kid")
-	uniform = /obj/item/clothing/under/child_jumpsuit
-	shoes = /obj/item/clothing/shoes/child_shoes
-	id = /obj/item/weapon/card/id/dreyfus/cargo
-
-/decl/hierarchy/outfit/job/cadet
-	name = OUTFIT_JOB_NAME("Cadet")
-	uniform = /obj/item/clothing/under/child_jumpsuit
-	shoes = /obj/item/clothing/shoes/child_shoes
-	id = /obj/item/weapon/card/id/dreyfus/sec
-
-/decl/hierarchy/outfit/job/medassist
-	name = OUTFIT_JOB_NAME("Medical Assistant")
-	uniform = /obj/item/clothing/under/child_jumpsuit
-	shoes = /obj/item/clothing/shoes/child_shoes
-	id = /obj/item/weapon/card/id/medical
-
-/decl/hierarchy/outfit/job/jr_upkeep
-	name = OUTFIT_JOB_NAME("Junior Upkeeper")
-	uniform = /obj/item/clothing/under/child_jumpsuit
-	shoes = /obj/item/clothing/shoes/child_shoes
-	id = /obj/item/weapon/card/id/dreyfus/engineer
 
 //church outfits
 /decl/hierarchy/outfit/job/arbiter
@@ -163,3 +132,13 @@
 	gloves = /obj/item/clothing/gloves/thick/swat/combat
 	//back = /obj/item/weapon/gun/projectile/shotgun/pump/boltaction/shitty/bayonet
 	flags = OUTFIT_NO_BACKPACK|OUTFIT_NO_SURVIVAL_GEAR
+
+/decl/hierarchy/outfit/job/dreyfus/clown
+	name = OUTFIT_JOB_NAME("Clown")
+	mask = /obj/item/clothing/mask/gas/clown_hat
+	uniform = /obj/item/clothing/under/rank/clown
+	shoes = /obj/item/clothing/shoes/clown_shoes
+	l_ear = /obj/item/device/radio/headset
+	r_pocket = /obj/item/weapon/bikehorn
+	id_type = /obj/item/weapon/card/id/dreyfus/civilian/clown
+	pda_type = /obj/item/device/pda/clown

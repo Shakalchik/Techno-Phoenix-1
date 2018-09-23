@@ -42,7 +42,7 @@
 	desc = "A special baton, heated red hot by electricity for branding unloyal subjects, and other criminals. Activate it to select the brand."
 	icon_state = "brander"
 	item_state = "baton"
-	var/brand = "НАЦИСТ"
+	var/brand = "ФАШИСТ"
 
 
 
@@ -59,7 +59,7 @@
 				user.doing_something = 0
 				playsound(H, 'sound/items/Welder2.ogg', 40, 1, -1)
 				H.add_event("humiliated", /datum/happiness_event/humiliated)
-				if((brand == "НАЦИСТ" && H.religion == IDEOLOGY_FASCISM) || (brand == "КОММУНИСТ" && H.religion == IDEOLOGY_COMMUNISM))
+				if((brand == "ФАШИСТ" && H.religion == IDEOLOGY_FASCISM) || (brand == "КОММУНИСТ" && H.religion == IDEOLOGY_COMMUNISM))
 					H.client.minus_honor(3)
 					H.client.honor = H.client.load_honor(H.ckey)
 					H.true_branded = 1
@@ -68,7 +68,7 @@
 
 /obj/item/weapon/brander/attack_self(mob/user)
 	..()
-	var/input = input(user,"Select Brand Type", "Brands") as null|anything in list("НАЦИСТ", "КОММУНИСТ", "ВОР", "НАСИЛЬНИК", "ПРЕСТУПНИК")
+	var/input = input(user,"Select Brand Type", "Brands") as null|anything in list("ФАШИСТ", "КОММУНИСТ", "ВОР", "НАСИЛЬНИК", "ПРЕСТУПНИК")
 	if(input)
 		brand = input
 
@@ -95,7 +95,7 @@
 		visible_message("<span class='notice'>The [src] beeps: \"Объект <b>ЯВЛЯЕТСЯ</b> ло&#255;листом.\"</span>")
 		return
 	else
-		visible_message("<span class='notice'>The [src] beeps: \"Объект <b>ВЕРОЯТНО</b> не &#255;вл&#255;етс&#255; ло&#255;листом.\"</span>")
+		visible_message("<span class='notice'>The [src] beeps: \"Объект <b>НЕ ЯВЛЯЕТСЯ</b> ло&#255;листом.\"</span>")
 /obj/machinery/arbiter_computer/attack_hand(mob/user as mob)
 	..()
 	visible_message("<span class='notice'>The [src] beeps: \"Сканируйте объект с помощью своего сканера ло&#255;льности, а затем проведите сканером по машине дл&#255; результатов.\"</span>")

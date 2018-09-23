@@ -418,7 +418,7 @@
 "ib" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 6},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 10},/turf/simulated/floor/wood,/area/crew_quarters/sleep)
 "ic" = (/obj/structure/bed/padded,/obj/item/weapon/bedsheet/mime,/obj/structure/curtain/open/bed,/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 8},/turf/simulated/floor/wood,/area/crew_quarters/sleep)
 "id" = (/obj/structure/table/woodentable,/obj/item/weapon/paper_bin,/obj/item/weapon/pen,/turf/simulated/floor/wood,/area/crew_quarters/sleep)
-"ie" = (/obj/structure/bed,/turf/simulated/floor/wood,/area/crew_quarters/sleep)
+"ie" = (/obj/structure/bed,/obj/item/weapon/bedsheet/hos,/turf/simulated/floor/wood,/area/crew_quarters/sleep)
 "if" = (/obj/structure/catwalk,/obj/structure/ladder,/obj/structure/sign/warning/nosmoking_2{pixel_x = 32},/obj/machinery/camera/autoname{tag = "icon-camera (WEST)"; icon_state = "camera"; dir = 8},/turf/simulated/floor/plating,/area/engineering/engine_room)
 "ig" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; pixel_y = 0},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/effect/floor_decal/newcorner/yellow{tag = "icon-yellow (WEST)"; icon_state = "yellow"; dir = 8},/turf/simulated/floor/tiled/dark,/area/engineering)
 "ih" = (/obj/structure/disposalpipe/segment,/obj/effect/floor_decal/newcorner/yellow{tag = "icon-yellow (EAST)"; icon_state = "yellow"; dir = 4},/turf/simulated/floor/tiled/dark,/area/engineering)
@@ -976,3 +976,4 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 "}
+

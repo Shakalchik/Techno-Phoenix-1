@@ -309,9 +309,9 @@
 		var/obj/machinery/disposal/toilet/T2 = locate() in src.loc
 		var/mob/living/M = locate() in src.loc
 		if(T && T.open)
-			message = "<B>[src]</B> какает в [T]."
+			message = "<B>[src]</B> срёт в [T]."
 		else if (T2 && T2.open)
-			message = "<B>[src]</B> defecates into \the [T2]."
+			message = "<B>[src]</B> срёт в \the [T2]."
 			var/obj/item/weapon/reagent_containers/food/snacks/poo/V = new/obj/item/weapon/reagent_containers/food/snacks/poo(src.loc)
 			if(reagents)
 				reagents.trans_to(V, rand(1,5))
@@ -345,7 +345,7 @@
 		bowels -= rand(60,80)
 
 	else
-		to_chat(src, "You don't have to.")
+		to_chat(src, "Чёт е хочетс&#255;.")
 		return
 
 	visible_message("[message]")
@@ -354,7 +354,7 @@
 /mob/living/carbon/human/proc/handle_piss()
 	var/message = null
 	if (bladder < 30)
-		to_chat(src, "You don't have to.")
+		to_chat(src, "Чёт не хочетс&#255;.")
 		return
 
 	var/obj/structure/urinal/U = locate() in src.loc

@@ -25,7 +25,7 @@
 "ay" = (/obj/structure/closet/walllocker/emerglocker/west,/turf/simulated/floor/tiled,/area/bridge)
 "az" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/tiled,/area/bridge)
 "aA" = (/obj/structure/closet/walllocker/emerglocker/east,/turf/simulated/floor/tiled,/area/bridge)
-"aB" = (/obj/structure/bed,/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 1},/obj/machinery/alarm{dir = 1; pixel_y = -25},/turf/simulated/floor/carpet,/area/bridge)
+"aB" = (/obj/structure/bed,/obj/item/weapon/bedsheet/hos,/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 1},/obj/machinery/alarm{dir = 1; pixel_y = -25},/turf/simulated/floor/carpet,/area/bridge)
 "aC" = (/turf/simulated/floor/carpet,/area/bridge)
 "aD" = (/obj/structure/grille/broken,/obj/structure/lattice,/turf/simulated/floor/reinforced/airless,/area/space)
 "aE" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4},/turf/simulated/floor/tiled,/area/bridge)
@@ -277,3 +277,4 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 cZaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 "}
+

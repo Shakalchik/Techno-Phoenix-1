@@ -769,7 +769,7 @@
 "pe" = (/obj/structure/cable{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/simulated/floor/plating,/area/maintenance/engineering)
 "pf" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/simulated/floor/plating,/area/maintenance/engineering)
 "pg" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; pixel_y = 0},/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/simulated/floor/plating,/area/maintenance/engineering)
-"ph" = (/obj/structure/curtain/open/bed,/obj/structure/bed/padded,/obj/item/weapon/bedsheet/hos,/obj/effect/floor_decal/newcorner/red/solid,/turf/simulated/floor/tiled,/area/security/meeting{name = "\improper Security Living Area"})
+"ph" = (/obj/structure/curtain/open/bed,/obj/structure/bed/padded,/obj/effect/floor_decal/newcorner/red/solid,/turf/simulated/floor/tiled,/area/security/meeting{name = "\improper Security Living Area"})
 "pi" = (/turf/simulated/floor/tiled,/area/security/meeting{name = "\improper Security Living Area"})
 "pj" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled,/area/security/meeting{name = "\improper Security Living Area"})
 "pk" = (/turf/simulated/wall/r_wall,/area/security/main)

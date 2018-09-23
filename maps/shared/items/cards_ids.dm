@@ -8,10 +8,9 @@
 	icon_state = "id"
 	job_access_type = /datum/job/employe
 
-/obj/item/weapon/card/id/dreyfus/cargo/ouvrier
-	icon_state = "id_qm"
-	job_access_type = /datum/job/ouvrier
-
+/obj/item/weapon/card/id/dreyfus/civilian/clown
+	icon_state = "id"
+	job_access_type = /datum/job/clown
 
 /obj/item/weapon/card/id/dreyfus/gold
 	icon_state = "gold"

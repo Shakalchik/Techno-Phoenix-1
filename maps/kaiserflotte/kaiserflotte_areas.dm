@@ -49,6 +49,9 @@
 /area/crew_quarters/heads/cmo
 	name = "\improper Command - CMO's Office"
 
+/area/crew_quarters/heads/maidroom
+	name = "\improper Command - Maid's Dorms"
+
 // Shuttles
 
 /area/shuttle/constructionsite

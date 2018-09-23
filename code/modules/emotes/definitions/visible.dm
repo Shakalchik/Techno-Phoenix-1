@@ -244,5 +244,5 @@
 	if(istype(user) && !(user.r_hand && user.l_hand))
 		var/t1 = round(text2num(extra_params))
 		if(isnum(t1) && t1 <= 5)
-			return "USER raises [t1] finger\s."
+			return "USER подн&#255;л [t1] палец."
 	return .. ()

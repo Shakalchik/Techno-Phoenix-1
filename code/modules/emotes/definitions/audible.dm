@@ -40,7 +40,7 @@
 
 /decl/emote/audible/scretch
 	key ="scretch"
-	emote_message_3p = "USER scretches."
+	emote_message_3p = "USER чешетс&#255;."
 
 /decl/emote/audible/choke
 	key ="choke"

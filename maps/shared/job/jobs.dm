@@ -5,17 +5,13 @@
 						/datum/job/hop,
 						/datum/job/doctor,
 						/datum/job/doctor/undertaker,
-						/datum/job/medassist,
 						/datum/job/kommandant,
 						/datum/job/officer,
-						/datum/job/cadet,
 						/datum/job/qm,
 						/datum/job/engineer,
-						/datum/job/jr_upkeep,
 						/datum/job/cargo_tech,
 						/datum/job/cargo_tech/machinist,
 						/datum/job/mining,
-						/datum/job/ouvrier,
 						/datum/job/chef,
 						///datum/job/chaplain,
 						/datum/job/janitor,
@@ -34,17 +30,13 @@
 						/datum/job/hop,
 						/datum/job/doctor,
 						/datum/job/doctor/undertaker,
-						/datum/job/medassist,
 						/datum/job/kommandant,
 						/datum/job/officer,
-						/datum/job/cadet,
 						/datum/job/qm,
 						/datum/job/engineer,
-						/datum/job/jr_upkeep,
 						/datum/job/cargo_tech,
 						/datum/job/cargo_tech/machinist,
 						///datum/job/mining,
-						/datum/job/ouvrier,
 						/datum/job/chef,
 						///datum/job/chaplain,
 						/datum/job/janitor,
@@ -64,17 +56,13 @@
 						/datum/job/hop,
 						/datum/job/doctor,
 						/datum/job/doctor/undertaker,
-						/datum/job/medassist,
 						/datum/job/kommandant,
 						/datum/job/officer,
-						/datum/job/cadet,
 						/datum/job/qm,
 						/datum/job/engineer,
-						/datum/job/jr_upkeep,
 						/datum/job/cargo_tech,
 						/datum/job/cargo_tech/machinist,
 						/datum/job/mining,
-						/datum/job/ouvrier,
 						/datum/job/chef,
 						///datum/job/chaplain,
 						/datum/job/janitor,
@@ -205,7 +193,8 @@
 /datum/job/doctor
 	selection_color = "#633d63"
 	title = "Doktor"
-	supervisors = "the Ñounselor"	minimal_player_age = 19
+	supervisors = "the Ñounselor"
+	minimal_player_age = 19
 	economic_modifier = 2
 	ideal_character_age = 30
 	total_positions = 3
@@ -370,101 +359,6 @@
 		H.add_stats(rand(10,15), rand(7,10), rand(9,14))
 
 //kid roles
-/datum/job/ouvrier
-	selection_color = "#7c6a2e"
-	title = "Cargoassistent"
-	supervisors = "the Quartiermeister"
-	minimal_player_age = 16
-	economic_modifier = 2
-	ideal_character_age = 21
-	total_positions = 2
-	spawn_positions = 2
-	faction = "Station"
-	department_flag = SUP
-	department = "Supply"
-	alt_titles = null
-	access = list(access_maint_tunnels, access_mailsorting, access_manufacturing, access_cargo, access_cargo_bot, access_mining, access_mining_station)
-	minimal_access = list(access_maint_tunnels, access_mailsorting, access_manufacturing, access_cargo, access_cargo_bot, access_mining, access_mining_station)
-	outfit_type = /decl/hierarchy/outfit/job/cargo_kid
-	social_class = SOCIAL_CLASS_MIN
-
-	equip(var/mob/living/carbon/human/H)
-		H.set_species("Child")//Actually makes them a child. Called before ..() so they can get their clothes.
-		H.add_stats(rand(3,6), rand(12,16), rand(6,9))
-		..()
-
-
-/datum/job/medassist
-	selection_color = "#633d63"
-	title = "Praktikant"
-	supervisors = "the Doktor"
-	minimal_player_age = 16
-	economic_modifier = 2
-	ideal_character_age = 21
-	total_positions = 2
-	spawn_positions = 2
-	faction = "Station"
-	department_flag = MED
-	department = "Medical"
-	alt_titles = null
-	access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads, access_tox,
-			access_chemistry, access_virology, access_cmo, access_surgery)
-	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads, access_tox,
-			access_chemistry, access_virology, access_cmo, access_surgery)
-	outfit_type = /decl/hierarchy/outfit/job/medassist.
-
-	equip(var/mob/living/carbon/human/H)
-		H.set_species("Child")//Actually makes them a child. Called before ..() so they can get their clothes.
-		H.add_stats(rand(3,6), rand(12,16), rand(6,9))
-		H.add_skills(rand(30,50), rand(30,50), rand(65,75))
-		..()
-
-
-/datum/job/cadet
-	selection_color = "#633d63"
-	title = "Cadet"
-	supervisors = "the peacekeepers"
-	minimal_player_age = 16
-	economic_modifier = 2
-	ideal_character_age = 21
-	total_positions = 2
-	spawn_positions = 2
-	faction = "Station"
-	department_flag = SEC
-	department = "Security"
-	access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_morgue, access_external_airlocks)
-	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_external_airlocks)
-	outfit_type = /decl/hierarchy/outfit/job/cadet
-
-	equip(var/mob/living/carbon/human/H)
-		H.set_species("Child")
-		H.add_stats(rand(3,6), rand(12,16), rand(6,9))
-		H.add_skills(rand(30,50), rand(50,65), rand(25,60))
-		..()
-
-/datum/job/jr_upkeep
-	selection_color = "#633d63"
-	title = "Junior Upkeeper"
-	supervisors = "the upkeepers"
-	minimal_player_age = 16
-	economic_modifier = 2
-	ideal_character_age = 21
-	total_positions = 2
-	spawn_positions = 2
-	faction = "Station"
-	department_flag = SEC
-	department = "Security"
-	access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_atmospherics, access_emergency_storage, access_tcomsat)
-	minimal_access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_atmospherics, access_emergency_storage, access_tcomsat)
-	outfit_type = /decl/hierarchy/outfit/job/jr_upkeep
-
-	equip(var/mob/living/carbon/human/H)
-		H.set_species("Child")
-		H.add_stats(rand(3,6), rand(12,16), rand(6,9))
-		H.add_skills(rand(30,50), rand(50,65), rand(25,60))
-		..()
-
-
 /datum/job/chef
 	title = "Kuchenchef"
 	supervisors = "the Ñounselor"
