@@ -72,8 +72,12 @@
 	key = "fap"
 
 /decl/emote/human/fap/do_emote(var/mob/living/carbon/human/user)
+	var/mob/living/carbon/human/H = usr
+	var/haspenis = H.has_penis()
+	var/hasvagina = (H.gender == FEMALE && H.species.genitals)
 	var/cooldown = pick("Вам не хочетс&#255;.", "Не сейчас.", "Вам не хочетс&#255;!", "Не сейчас!", "Служба Кайзеру наперво, а дрочить - потом!")
-	var/masturbating = pick("дрочит.", "дрочит!", "мастурбирует.", "мастурбирует!", "на&#255;ривает.", "на&#255;ривает!", "трогает Ваньку за встаньку!", "гон&#255;ет лысого!", "гон&#255;ет лысого.")
+	var/masturbating = pick("дрочит.", "дрочит!", "мастурбирует.", "мастурбирует!", "на&#255;ривает.", "на&#255;ривает!", "двигает рукой вверх и вниз.", "двигает рукой вверх и вниз!")
+	var/masturbatingf = pick("дрочит.", "дрочит!", "мастурбирует.", "мастурбирует!", "теребит горошинку.", "теребит горошинку!", "просовывает пальцы в своё лоно.", "просовывает пальцы в своё лоно!")
 	if(user.erpcooldown)
 		to_chat(user, "<span class='info'>[cooldown]</span>")
 		return
@@ -83,7 +87,13 @@
 			return
 	if(user.handcuffed)//Or if you're cuffed.
 		return
-	user.visible_message("<b>[user]</b> [masturbating]")
-	user.lust += 10
+	if (haspenis)
+		user.visible_message("<font color=purple><b>[user]</b> [masturbating]</font>")
+		user.lust += 10
+	if (hasvagina)
+		user.visible_message("<font color=purple><b>[user]</b> [masturbatingf]</font>")
+		user.lust += 10
 	if (user.lust >= user.resistenza)
 		user.cum(user, user)
+	else
+		return

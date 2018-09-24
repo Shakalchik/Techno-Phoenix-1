@@ -69,7 +69,7 @@
 		speaker_mask = B.truename
 	..(speaker,message,speaker_mask)
 
-/datum/language/vox
+/*/datum/language/vox
 	name = "Vox-pidgin"
 	desc = "The common tongue of the various Vox ships making up the Shoal. It sounds like chaotic shrieking to everyone else."
 	speech_verb = "shrieks"
@@ -83,7 +83,7 @@
 	machine_understands = 0
 
 /datum/language/vox/get_random_name()
-	return ..(FEMALE,1,6)
+	return ..(FEMALE,1,6)*/
 
 /datum/language/cultcommon
 	name = LANGUAGE_CULT
