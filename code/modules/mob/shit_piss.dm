@@ -109,7 +109,7 @@
 	spawn(800)
 		dried = 1
 		name = "dried urine stain"
-		desc = "That's a dried crusty urine stain. Fucking janitors."
+		desc = "That's a dried crusty urine stain."
 
 
 
@@ -257,13 +257,13 @@
 					bowels += 15
 			if(400 to 450)
 				if(prob(5))
-					to_chat(src, "<span class='danger'>Точно следует идти и откладывать личинку!</span>")
+					to_chat(src, "<span class='danger'>Точно следует идти в туалет!</span>")
 					bowels += 15
 			if(450 to 500)
 				if(prob(2))
 					handle_shit()
 				else if(prob(10))
-					to_chat(src, "<span class='danger'>Еще чуть-чуть и штаны будут шоколадными!</span>")
+					to_chat(src, "<span class='danger'>Еще чуть-чуть и обосрусь!</span>")
 					bowels += 25
 			if(500 to 550)
 				if(prob(15))
@@ -345,7 +345,7 @@
 		bowels -= rand(60,80)
 
 	else
-		to_chat(src, "Чёт е хочетс&#255;.")
+		to_chat(src, "Чёт не хочетс&#255;.")
 		return
 
 	visible_message("[message]")
@@ -353,19 +353,19 @@
 //Peeing
 /mob/living/carbon/human/proc/handle_piss()
 	var/message = null
-	if (bladder < 30)
+	if (bladder < 10)
 		to_chat(src, "Чёт не хочетс&#255;.")
 		return
 
 	var/obj/structure/urinal/U = locate() in src.loc
-	var/obj/machinery/disposal/toilet/T = locate() in src.loc
+	var/obj/structure/toilet/T = locate() in src.loc
 	var/obj/machinery/disposal/toilet/T2 = locate() in src.loc
 	var/obj/structure/sink/S = locate() in src.loc
 	var/obj/item/weapon/reagent_containers/RC = locate() in src.loc
+	var/mob/living/M = locate() in src.loc
 	if((U || S) && gender != FEMALE)//In the urinal or sink.
 		message = "<B>[src]</B> писает пр&#255;мо в [U ? U : S]."
 		reagents.remove_any(rand(1,8))
-
 	else if( (T && T.open) || (T2 && T2.open) )//In the toilet.
 		message = "<B>[src]</B> писает в [T]."
 		reagents.remove_any(rand(1,8))
@@ -378,6 +378,11 @@
 			RC.reagents.add_reagent("urine", amount)
 			if(reagents)
 				reagents.trans_to(RC, amount)
+
+	//Pee on the face.
+	else if(M != src && M.lying)//Can only pee on them if they're lying down.
+		message = "<span class='danger'><b>[src]</b> ссыт точно <b>[M]</b> в рот!</span>"
+		M.reagents.add_reagent("urine", 10)
 
 	else if(w_uniform && !((T && T.open) || (T2 && T2.open)))//In your pants.
 		message = "<B>[src]</B> портит свои штаны."
@@ -392,6 +397,6 @@
 		message = "<B>[src]</B> писает на [TT.name]."
 		piss_left++//Global var for round end, not how much piss is left.
 
-	bladder -= 50
+	bladder -= 10
 	visible_message("[message]")
 

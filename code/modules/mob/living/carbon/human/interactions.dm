@@ -144,6 +144,8 @@
 		if (hasvagina && haspenis_p)
 			dat += {"<font size=3><B>Ћоно:</B></font><BR>"}
 			dat += {"Х <A href='?src=\ref[usr];interaction=mount'><font color=purple>ќседлать!</font></A><BR><HR>"}
+		if (hasvagina && haspenis_p)
+			dat += {"Х <A href='?src=\ref[usr];interaction=flick'><font color=purple>«аставить отлизывать!</font></A><BR><HR>"}
 
 
 	var/datum/browser/popup = new(usr, "interactions", "Interactions", 340, 480)
@@ -156,7 +158,7 @@
 	var/mob/living/carbon/human/lastfucked
 	var/lfhole
 	var/potenzia = 10
-	var/tits = 3
+	var/tits = 2
 	var/resistenza = 200
 	var/lust = 0
 	var/erpcooldown = 0
@@ -497,6 +499,39 @@ mob/living/carbon/human/proc/fuck(mob/living/carbon/human/H as mob, mob/living/c
 			playsound(loc, "honk/sound/interactions/bang[rand(1, 3)].ogg", 70, 1, -1)
 			if (H.species.name == "Slime People")
 				playsound(loc, "honk/sound/interactions/champ[rand(1, 2)].ogg", 50, 1, -1)
+
+		if("flick")
+			message = pick("приблизила своЄ лоно к [P]", "сблизила свою вагину и лицо [P]")
+			if (H.lastfucked != P || H.lfhole != hole)
+				message = pick("елозит своей вагиной по лицу [P]", "заставл[ya]ет [P] задохнутьс[ya]")
+				H.lastfucked = P
+				H.lfhole = hole
+			if (prob(5) && P.stat != DEAD)
+				H.visible_message("<font color=purple><B>[H] [message].</B></font>")
+				P.lust += H.potenzia * 2
+			else
+				H.visible_message("<font color=purple>[H] [message].</font>")
+			if (istype(P.loc, /obj/structure/closet))
+				P.visible_message("<font color=purple>[H] [message].</font>")
+				playsound(P.loc.loc, 'sound/effects/clang.ogg', 50, 0, 0)
+				H.lust += P.potenzia
+			if (P.potenzia > 20)
+				H.staminaloss += P.potenzia * 0.25
+			if (H.lust >= H.resistenza)
+				H.cum(H, P)
+			else
+				H.moan()
+			H.do_fucking_animation(P)
+			playsound(loc, "honk/sound/interactions/oral[rand(1, 2)].ogg", 70, 1, -1)
+			if (H.species.name == "Slime People")
+				playsound(loc, "honk/sound/interactions/champ[rand(1, 2)].ogg", 50, 1, -1)
+			if (prob(H.potenzia))
+				P.staminaloss += 3
+				H.visible_message("<B>[P]</B> [pick("давитс[ya] вагиной <B>[H]</B>", "задыхаетс[ya]")].")
+				P.losebreath=10
+				if (istype(P.loc, /obj/structure/closet))
+					P.visible_message("<B>[P]</B> [pick("давитс[ya] вагиной <B>[H]</B>", "задыхаетс[ya]")].")
+					P.losebreath=10
 
 /mob/living/carbon/human/proc/moan()
 

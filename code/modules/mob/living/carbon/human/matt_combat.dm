@@ -31,7 +31,7 @@
 
 /mob/living/proc/attempt_dodge()//Handle parry is an object proc and it's, its own thing.
 	if(combat_mode && (defense_intent == I_DODGE) && !lying)//Todo, make use of the check_shield_arc proc to make sure you can't dodge from behind.
-		if(staminaloss < 50 && statscheck(dex, 20))//You gotta be the master of dexterity to dodge every time. 
+		if(staminaloss < 50 && statscheck(dex, 20))//You gotta be the master of dexterity to dodge every time.
 			do_dodge()
 			return	1
 		else if(staminaloss >= 50 && prob(10))
@@ -51,17 +51,17 @@
 	if(!incapacitated())
 		Stun(5)
 		Weaken(5)
-		visible_message("<b>[src] surrenders!</b>")
+		visible_message("<b>[src] сдаётс&#255;!</b>")
 		playsound(src, 'sound/effects/surrender.ogg', 50, 1)
 
 /mob/proc/mob_rest()
 	if(resting && !stunned && !weakened)//The incapacitated proc includes resting for whatever fucking stupid reason I hate SS13 code so fucking much.
 		visible_message("<span class='notice'>[usr] is trying to get up.</span>")
-		if(do_after(src, 20))
+		if(do_after(src, 10))
 			resting = 0
 			rest.icon_state = "rest0"
 		return
-		
+
 	else
 		resting = 1
 		rest.icon_state = "rest1"
