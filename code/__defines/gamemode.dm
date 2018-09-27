@@ -51,7 +51,7 @@
 #define MODE_DEITY "deity"
 #define MODE_GODCULTIST "god cultist"
 
-#define DEFAULT_TELECRYSTAL_AMOUNT 130
+#define DEFAULT_TELECRYSTAL_AMOUNT 999999999999999999999
 
 /////////////////
 ////WIZARD //////

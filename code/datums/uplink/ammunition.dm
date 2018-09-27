@@ -25,7 +25,7 @@
 	item_cost = 8
 	path = /obj/item/ammo_magazine/c38
 
-/*
+
 /datum/uplink_item/item/ammo/c45m
 	name = ".45"
 	path = /obj/item/ammo_magazine/c45m
@@ -66,4 +66,3 @@
 	name = "Flechette Magazine"
 	item_cost = 8
 	path = /obj/item/weapon/magnetic_ammo
-*/
