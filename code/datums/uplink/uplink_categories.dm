@@ -39,11 +39,11 @@ datum/uplink_category/implants
 //datum/uplink_category/hardsuit_modules
 	//name = "Hardsuit Modules"
 
-datum/uplink_category/services
+/datum/uplink_category/services
 	name = "Services"
 
-datum/uplink_category/badassery
+/datum/uplink_category/badassery
 	name = "Badassery"
 
-datum/uplink_category/telecrystals
+/datum/uplink_category/telecrystals
 	name = "Telecrystals"
