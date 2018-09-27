@@ -29,7 +29,7 @@
 	item_cost = 24
 	path = /obj/item/weapon/pen/reagent/paralysis
 
-/*
+
 /datum/uplink_item/item/stealthy_weapons/concealed_cane
 	name = "Concealed Cane Sword"
 	item_cost = 8
@@ -39,5 +39,3 @@
 	name = "Detomatix PDA Cartridge"
 	item_cost = 16
 	path = /obj/item/weapon/cartridge/syndicate
-*/
-

@@ -40,7 +40,7 @@
 	item_cost = 15
 	path = /obj/item/weapon/beartrap
 
-/*
+
 /datum/uplink_item/item/tools/heavy_armor
 	name = "Heavy Armor Vest and Helmet"
 	item_cost = 16
@@ -108,4 +108,3 @@
 	name = "Morphic Clerical Kit"
 	item_cost = 16
 	path = /obj/item/weapon/storage/backpack/satchel/syndie_kit/clerical
-*/
