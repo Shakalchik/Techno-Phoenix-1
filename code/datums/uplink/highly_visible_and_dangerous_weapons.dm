@@ -29,7 +29,7 @@
 	name = "Energy Crossbow"
 	item_cost = 24
 	path = /obj/item/weapon/gun/energy/crossbow
-/*
+
 /datum/uplink_item/item/visible_weapons/dartgun
 	name = "Dart Gun"
 	item_cost = 20
@@ -53,7 +53,7 @@
 /datum/uplink_item/item/visible_weapons/grenade_launcher
 	name = "Grenade Launcher"
 	item_cost = 60
-	antag_roles = list(MODE_MERCENARY = 12)
+	//antag_roles = list(MODE_MERCENARY = 12)
 	path = /obj/item/weapon/gun/launcher/grenade/loaded
 
 //These are for traitors (or other antags, perhaps) to have the option of purchasing some merc gear.
@@ -110,4 +110,3 @@
 	item_cost = 60
 	antag_costs = list(MODE_MERCENARY = 9)
 	path = /obj/item/weapon/gun/magnetic/railgun/flechette
-*/

@@ -30,8 +30,8 @@
 /datum/uplink_category/tools
 	name = "Devices and Tools"
 
-//datum/uplink_category/implants
-	//name = "Implants"
+datum/uplink_category/implants
+	name = "Implants"
 
 /datum/uplink_category/medical
 	name = "Medical"
@@ -39,11 +39,11 @@
 //datum/uplink_category/hardsuit_modules
 	//name = "Hardsuit Modules"
 
-//datum/uplink_category/services
-	//name = "Services"
+/datum/uplink_category/services
+	name = "Services"
 
-//datum/uplink_category/badassery
-	//name = "Badassery"
+/datum/uplink_category/badassery
+	name = "Badassery"
 
-//datum/uplink_category/telecrystals
-	//name = "Telecrystals"
+/datum/uplink_category/telecrystals
+	name = "Telecrystals"
