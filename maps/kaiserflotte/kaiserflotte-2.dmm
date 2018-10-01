@@ -3255,7 +3255,7 @@
 "bkE" = (/obj/item/modular_computer/console/preset/engineering,/obj/structure/sign/double/kaiserflag/right{pixel_y = 32},/turf/simulated/floor/wood,/area/bridge)
 "bkF" = (/obj/structure/cable/cyan{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/carpet/blue,/area/bridge/meeting_room)
 "bkG" = (/obj/structure/noticeboard{pixel_y = 27},/turf/simulated/floor/wood,/area/bridge/meeting_room)
-"bkH" = (/obj/structure/closet/secure_closet/captains,/obj/item/device/radio/intercom{dir = 4; pixel_x = -22},/turf/simulated/floor/wood,/area/crew_quarters/captain)
+"bkH" = (/obj/structure/closet/secure_closet/captains,/obj/item/device/radio/intercom{dir = 4; pixel_x = -22},/obj/item/clothing/suit/robes,/turf/simulated/floor/wood,/area/crew_quarters/captain)
 "bkI" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/wood,/area/crew_quarters/captain)
 "bkJ" = (/obj/item/modular_computer/console/preset/command,/turf/simulated/floor/wood,/area/crew_quarters/captain)
 "bkK" = (/obj/structure/table/woodentable,/obj/item/weapon/book/manual/security_space_law,/obj/random_multi/single_item/captains_spare_id{weight = 10},/turf/simulated/floor/wood,/area/crew_quarters/captain)
