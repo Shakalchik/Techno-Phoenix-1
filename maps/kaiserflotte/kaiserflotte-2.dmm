@@ -1391,7 +1391,7 @@
 "aAM" = (/obj/structure/table/woodentable,/obj/machinery/reagentgrinder,/obj/item/weapon/packageWrap,/turf/simulated/floor/lino,/area/crew_quarters/kitchen)
 "aAN" = (/turf/simulated/wall,/area/crew_quarters/bar)
 "aAO" = (/obj/structure/disposalpipe/segment,/obj/machinery/door/firedoor,/obj/machinery/door/airlock/maintenance{name = "Bar Maintenance"; req_access = list(25)},/turf/simulated/floor/plating,/area/crew_quarters/bar)
-"aAP" = (/obj/structure/ladder,/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/floor/plating,/area/maintenance/bar)
+"aAP" = (/obj/random/closet,/obj/random/tool,/turf/simulated/floor/plating,/area/maintenance/bar)
 "aAQ" = (/obj/random/closet,/turf/simulated/floor/plating,/area/maintenance/bar)
 "aAR" = (/obj/machinery/door/airlock/engineering{icon_state = "door_closed"; locked = 0; name = "Fore Starboard Solar Access"; req_access = list(11)},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/plating,/area/maintenance/auxsolarstarboard)
 "aAS" = (/obj/structure/sign/warning/high_voltage,/turf/simulated/wall/r_wall,/area/maintenance/auxsolarstarboard)
