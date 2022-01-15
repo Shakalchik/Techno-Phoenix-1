@@ -2,13 +2,13 @@
 /proc/rhtml_encode(var/msg)
 	msg = replacetext(msg, "<", "&lt;")
 	msg = replacetext(msg, ">", "&gt;")
-	msg = replacetext(msg, "ÿ", "&#255;")
+	msg = replacetext(msg, "ÿ", "&#1103;")
 	return msg
 
 /proc/rhtml_decode(var/msg)
 	msg = replacetext(msg, "&gt;", ">")
 	msg = replacetext(msg, "&lt;", "<")
-	msg = replacetext(msg, "&#255;", "ÿ")
+	msg = replacetext(msg, "&#1103;", "ÿ")
 	return msg
 
 
@@ -24,7 +24,7 @@
 			t += ascii2text(168)
 		else t += ascii2text(a)
 	t = replacetext(t,"ÿ","ß")
-	t = replacetext(t,"&#255;","ß")
+	t = replacetext(t,"&#1071;","ß")
 	return t
 
 /proc/rlowertext(text as text)
@@ -42,29 +42,29 @@
 
 //RUS CONVERTERS
 /proc/russian_to_cp1251(var/msg)//CHATBOX
-	return replacetext(msg, "ÿ", "&#255;")
+	return replacetext(msg, "ÿ", "&#1103;")
 
 /proc/russian_to_utf8(var/msg)//PDA PAPER POPUPS
 	return replacetext(msg, "ÿ", "&#1103;")
 
 /proc/utf8_to_cp1251(msg)
-	return replacetext(msg, "&#1103;", "&#255;")
+	return replacetext(msg, "&#1103;", "&#1103;")
 
 /proc/cp1251_to_utf8(msg)
-	return replacetext(msg, "&#255;", "&#1103;")
+	return replacetext(msg, "&#1103;", "&#1103;")
 
 //Prepare text for edit. Replace "ÿ" with "\ß" for edition. Don't forget to call post_edit().
 /proc/edit_cp1251(msg)
-	return replacetext(msg, "&#255;", "\\ß")
+	return replacetext(msg, "&#1071;", "ß")
 
 /proc/edit_utf8(msg)
-	return replacetext(msg, "&#1103;", "\\ß")
+	return replacetext(msg, "&#1071;", "ß")
 
 /proc/post_edit_cp1251(msg)
-	return replacetext(msg, "\\ß", "&#255;")
+	return replacetext(msg, "ß", "&#1071;")
 
 /proc/post_edit_utf8(msg)
-	return replacetext(msg, "\\ß", "&#1103;")
+	return replacetext(msg, "ß", "&#1071;")
 
 //input
 
