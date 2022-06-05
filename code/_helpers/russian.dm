@@ -42,29 +42,29 @@
 
 //RUS CONVERTERS
 /proc/russian_to_cp1251(var/msg)//CHATBOX
-	return replacetext(msg, "ÿ", "&#1103;")
+	return replacetext(msg, "ÿ", "ÿ")
 
 /proc/russian_to_utf8(var/msg)//PDA PAPER POPUPS
-	return replacetext(msg, "ÿ", "&#1103;")
+	return replacetext(msg, "ÿ", "ÿ")
 
 /proc/utf8_to_cp1251(msg)
-	return replacetext(msg, "&#1103;", "&#1103;")
+	return replacetext(msg, "ÿ", "ÿ")
 
 /proc/cp1251_to_utf8(msg)
-	return replacetext(msg, "&#1103;", "&#1103;")
+	return replacetext(msg, "ÿ", "ÿ")
 
 //Prepare text for edit. Replace "ÿ" with "\ß" for edition. Don't forget to call post_edit().
 /proc/edit_cp1251(msg)
-	return replacetext(msg, "&#1071;", "ß")
+	return replacetext(msg, "ÿ", "ß")
 
 /proc/edit_utf8(msg)
-	return replacetext(msg, "&#1071;", "ß")
+	return replacetext(msg, "ÿ", "ß")
 
 /proc/post_edit_cp1251(msg)
-	return replacetext(msg, "ß", "&#1071;")
+	return replacetext(msg, "ÿ", "ß")
 
 /proc/post_edit_utf8(msg)
-	return replacetext(msg, "ß", "&#1071;")
+	return replacetext(msg, "ÿ", "ß")
 
 //input
 
