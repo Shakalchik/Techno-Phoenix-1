@@ -39,7 +39,7 @@
 	switch(reagents.temperature)
 		if(0 to BODYTEMP_COLD_DAMAGE_LIMIT)
 			feels = "extremely cold"
-		if(BODYTEMP_HEAT_DAMAGE_LIMIT to TEMPERATURE_REFRESHING)
+		if(TEMPERATURE_REFRESHING to BODYTEMP_HEAT_DAMAGE_LIMIT)
 			feels = "ice cold"
 		if(TEMPERATURE_REFRESHING to T0C+15)
 			feels = "cold"
