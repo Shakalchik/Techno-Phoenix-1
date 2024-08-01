@@ -41,7 +41,7 @@
 
 	if(encode)
 		// The below \ escapes have a space inserted to attempt to enable Travis auto-checking of span class usage. Please do not remove the space.
-		//In addition to processing html, html_encode removes byond formatting codes like "\ red", "\ i" and other.
+		//In addition to processing html, rhtml_encode removes byond formatting codes like "\ red", "\ i" and other.
 		//It is important to avoid double-encode text, it can "break" quotes and some other characters.
 		//Also, keep in mind that escaped characters don't work in the interface (window titles, lower left corner of the main window, etc.)
 		input = rhtml_encode(input)
@@ -56,21 +56,7 @@
 
 	return input
 
-/proc/sanitize_simple(var/t,var/list/repl_chars = list("\n"="#","\t"="#"))
-	for(var/char in repl_chars)
-		t = replacetext(t, char, repl_chars[char])
-	return t
-
-/proc/readd_quotes(var/t)
-	var/list/repl_chars = list("&#34;" = "\"")
-	for(var/char in repl_chars)
-		var/index = findtext(t, char)
-		while(index)
-			t = copytext(t, 1, index) + repl_chars[char] + copytext(t, index+5)
-			index = findtext(t, char)
-	return t
-
-//Run sanitize(), but remove <, >, " first to prevent displaying them as &gt; &lt; &34; in some places, after html_encode().
+//Run sanitize(), but remove <, >, " first to prevent displaying them as &gt; &lt; &34; in some places, after rhtml_encode().
 //Best used for sanitize object names, window titles.
 //If you have a problem with sanitize() in chat, when quotes and >, < are displayed as html entites -
 //this is a problem of double-encode(when & becomes &amp;), use sanitize() with encode=0, but not the sanitizeSafe()!
@@ -90,14 +76,14 @@
 		var/ascii_char = text2ascii(input,i)
 		switch(ascii_char)
 			// A  .. Z
-			if(65 to 90, 1040 to 1071, 1025)			//Uppercase Letters
+			if(65 to 90)			//Uppercase Letters
 				output += ascii2text(ascii_char)
 				number_of_alphanumeric++
 				last_char_group = 4
 
 			// a  .. z
-			if(97 to 122, 1072 to 1103, 1105)			//Lowercase Letters
-				if(last_char_group<2)		output += uppertext(ascii2text(ascii_char))	//Force uppercase first character
+			if(97 to 122)			//Lowercase Letters
+				if(last_char_group<2)		output += ascii2text(ascii_char-32)	//Force uppercase first character
 				else						output += ascii2text(ascii_char)
 				number_of_alphanumeric++
 				last_char_group = 4
@@ -334,10 +320,10 @@ proc/TextPreview(var/string,var/len=40)
 		var/ascii_char = text2ascii(input,i)
 		switch(ascii_char)
 			// A  .. Z
-			if(65 to 90, 1040 to 1071, 1025)			//Uppercase Letters
+			if(65 to 90)			//Uppercase Letters
 				return 1
 			// a  .. z
-			if(97 to 122, 1072 to 1103, 1105)			//Lowercase Letters
+			if(97 to 122)			//Lowercase Letters
 				return 1
 
 			// 0  .. 9

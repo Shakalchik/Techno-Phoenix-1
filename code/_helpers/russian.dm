@@ -2,13 +2,13 @@
 /proc/rhtml_encode(var/msg)
 	msg = replacetext(msg, "<", "&lt;")
 	msg = replacetext(msg, ">", "&gt;")
-	msg = replacetext(msg, "Ã¿", "&#255;")
+	msg = replacetext(msg, "ÿ", "&#1103;")
 	return msg
 
 /proc/rhtml_decode(var/msg)
 	msg = replacetext(msg, "&gt;", ">")
 	msg = replacetext(msg, "&lt;", "<")
-	msg = replacetext(msg, "&#255;", "Ã¿")
+	msg = replacetext(msg, "&#1103;", "ÿ")
 	return msg
 
 
@@ -23,7 +23,8 @@
 		else if (a == 184)
 			t += ascii2text(168)
 		else t += ascii2text(a)
-	t = replacetext(t,"&#255;","ÃŸ")
+	t = replacetext(t,"ÿ","ß")
+	t = replacetext(t,"&#1071;","ß")
 	return t
 
 /proc/rlowertext(text as text)
@@ -41,29 +42,29 @@
 
 //RUS CONVERTERS
 /proc/russian_to_cp1251(var/msg)//CHATBOX
-	return replacetext(msg, "Ã¿", "&#255;")
+	return replacetext(msg, "ÿ", "ÿ")
 
 /proc/russian_to_utf8(var/msg)//PDA PAPER POPUPS
-	return replacetext(msg, "Ã¿", "&#1103;")
+	return replacetext(msg, "ÿ", "ÿ")
 
 /proc/utf8_to_cp1251(msg)
-	return replacetext(msg, "&#1103;", "&#255;")
+	return replacetext(msg, "ÿ", "ÿ")
 
 /proc/cp1251_to_utf8(msg)
-	return replacetext(msg, "&#255;", "&#1103;")
+	return replacetext(msg, "ÿ", "ÿ")
 
-//Prepare text for edit. Replace "Ã¿" with "\ÃŸ" for edition. Don't forget to call post_edit().
+//Prepare text for edit. Replace "ÿ" with "\ß" for edition. Don't forget to call post_edit().
 /proc/edit_cp1251(msg)
-	return replacetext(msg, "&#255;", "\\ÃŸ")
+	return replacetext(msg, "ÿ", "ß")
 
 /proc/edit_utf8(msg)
-	return replacetext(msg, "&#1103;", "\\ÃŸ")
+	return replacetext(msg, "ÿ", "ß")
 
 /proc/post_edit_cp1251(msg)
-	return replacetext(msg, "\\ÃŸ", "&#255;")
+	return replacetext(msg, "ÿ", "ß")
 
 /proc/post_edit_utf8(msg)
-	return replacetext(msg, "\\ÃŸ", "&#1103;")
+	return replacetext(msg, "ÿ", "ß")
 
 //input
 
@@ -89,13 +90,13 @@
 
 
 var/global/list/rkeys = list(
-	"Ð°" = "f", "Ð²" = "d", "Ð³" = "u", "Ð´" = "l",
-	"Ðµ" = "t", "Ð·" = "p", "Ð¸" = "b", "Ð¹" = "q",
-	"Ðº" = "r", "Ð»" = "k", "Ð¼" = "v", "Ð½" = "y",
-	"Ð¾" = "j", "Ð¿" = "g", "Ñ€" = "h", "Ñ" = "c",
-	"Ñ‚" = "n", "Ñƒ" = "e", "Ñ„" = "a", "Ñ†" = "w",
-	"Ñ‡" = "x", "Ñˆ" = "i", "Ñ‰" = "o", "Ñ‹" = "s",
-	"ÑŒ" = "m", "Ñ" = "z"
+	"à" = "f", "â" = "d", "ã" = "u", "ä" = "l",
+	"å" = "t", "ç" = "p", "è" = "b", "é" = "q",
+	"ê" = "r", "ë" = "k", "ì" = "v", "í" = "y",
+	"î" = "j", "ï" = "g", "ð" = "h", "ñ" = "c",
+	"ò" = "n", "ó" = "e", "ô" = "a", "ö" = "w",
+	"÷" = "x", "ø" = "i", "ù" = "o", "û" = "s",
+	"ü" = "m", "ÿ" = "z"
 )
 
 //Transform keys from russian keyboard layout to eng analogues and lowertext it.

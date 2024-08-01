@@ -86,7 +86,7 @@
 		. += copytext(message, 1, min_index)
 		if(copytext(message, min_index, min_index+1) == ruppertext(min_char))
 			switch(text2ascii(message, min_index+1))
-				if(65 to 90, 1040 to 1071, 1025) // A-Z, uppercase; uppercase R/S followed by another uppercase letter, uppercase the entire replacement string
+				if(65 to 90) // A-Z, uppercase; uppercase R/S followed by another uppercase letter, uppercase the entire replacement string
 					. += ruppertext(pick(map[min_char]))
 				else
 					. += capitalize(pick(map[min_char]))
